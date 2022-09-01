@@ -1,0 +1,394 @@
+body{
+  background-image: url("https://static.videezy.com/system/resources/thumbnails/000/056/219/original/animation-sky-grass-bubbles.jpg");
+  background-size: cover;
+  width: 100%;
+  animation: BgMove 300s ease infinite;
+  overflow: hidden;
+}
+
+
+
+@keyframes BgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  
+} 
+
+.App{
+  width: 100%;
+  padding: 2rem;
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App > img{
+  margin-top: -90px;
+  height: 100px;
+}
+
+.pulse{
+  margin-left: -15px;
+  margin-top: -150px;
+  margin-bottom: -60px;
+  animation: pulse 15s infinite;
+  -webkit-animation: pulse 20s infinite;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(0.6, 0.6, 0.6);
+    transform: scale3d(0.6, 0.6, 0.6);
+  }
+
+  50% {
+    -webkit-transform: scale3d(0.58, 0.58, 0.58);
+    transform: scale3d(0.58, 0.58, 0.58);
+  }
+
+  to {
+    -webkit-transform: scale3d(0.6, 0.6, 0.6);
+    transform: scale3d(0.6, 0.6, 0.6);
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+
+  50% {
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+
+  to {
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.cardsContainer{
+  /* background: rgba(255, 255, 255, 0.526);
+  backdrop-filter: blur(10px); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 600px;
+  border-radius: 10px;
+}
+
+.cardAndBtn{
+  width: 100%;
+  /* background: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.pokeCard{
+  position: relative;
+  width: 380px;
+  height: 550px;
+  /* background: rgba(255, 255, 255, 0.526);
+  backdrop-filter: blur(10px); */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0.1px 0.1px 15px #777;
+}
+
+.pokeBall{
+  position: absolute;
+  top: 281px;
+  z-index: 1;
+}
+
+.pokeBall > svg {
+  width: 85px;
+}
+
+.pokeBall > svg:hover{
+ cursor: pointer;
+}
+
+.pokePic {
+  width: 100%;
+  height: 60%;
+  background: rgba(255, 0, 0, 0.865);
+  backdrop-filter: blur(10px);
+}
+
+.pokePic > img {
+  height: 100%;
+  animation: pokePulse 15s infinite;
+  -webkit-animation: pokePulse 20s infinite;
+}
+
+h2{
+  margin-bottom: -30px;
+  color: #ffcd01;
+  text-shadow: 2px 2px 1px #1b366f;
+  font-size: 35px;
+}
+
+.pokeDesc{
+  height: 40%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+}
+
+.pokeDesc > div {
+  margin-top: 60px;
+  font-size: 25px;
+}
+
+p{
+  font-weight: bold;
+  color: #ffcd01;
+  text-shadow: 0.5px 0.5px 1.5px #444;
+}
+span{
+  font-weight: 200;
+  color: black;
+}
+
+@keyframes pokePulse {
+  from {
+    -webkit-transform: scale3d(0.6, 0.6, 0.6);
+    transform: scale3d(0.6, 0.6, 0.6);
+  }
+
+  50% {
+    -webkit-transform: scale3d(0.7, 0.7, 0.7);
+    transform: scale3d(0.7, 0.7, 0.7);
+  }
+
+  to {
+    -webkit-transform: scale3d(0.6, 0.6, 0.6);
+    transform: scale3d(0.6, 0.6, 0.6);
+  }
+}
+
+@-webkit-keyframes pokePulse {
+  from {
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+
+  50% {
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+
+  to {
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.btn{
+  width: 50px;
+  height: 50px;
+  background: #ffcd01;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 25px;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0.1px 0.1px 5px #777;
+  text-shadow: 0.5px 0.5px 2px #444;
+}
+
+.btn:hover{
+  background: rgba(251, 27, 27, 0.736);
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width:800px) {
+ 
+  
+  #root{
+    padding: 0;
+  }
+
+  .App{
+    padding: 0;
+  }
+
+  
+  .pulse{
+    margin-left: 5px;
+    margin-top: -90px;
+    margin-bottom: -110px;
+    animation: pulse 20s infinite;
+    -webkit-animation: pulse 20s infinite;
+  }
+
+  
+  .cardAndBtn{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .pokeCard{
+    width: 340px;
+    height: 480px;
+    border-radius: 10px;
+
+  }
+
+  .pokeBall{
+    top: 239px;
+  }
+
+  .pokeDesc > div{
+    margin-top: 60px;
+    font-size: 20px;
+  }
+  
+}
+
+@media (max-width: 600px) {
+
+  .pulse{
+    margin-left: 20px;
+    margin-top: -120px;
+    margin-bottom: -130px;
+    animation: pulse 200s infinite;
+    -webkit-animation: pulse 200s infinite;
+  }
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(0.4, 0.4, 0.4);
+      transform: scale3d(0.4, 0.4, 0.4);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(0.35, 0.35, 0.35);
+      transform: scale3d(0.35, 0.35, 0.35);
+    }
+  
+    to {
+      -webkit-transform: scale3d(0.4, 0.4, 0.4);
+      transform: scale3d(0.4, 0.4, 0.4);
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    from {
+      -webkit-transform: scale3d(0.4, 0.4, 0.4);
+      transform: scale3d(0.4, 0.4, 0.4);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(0.35, 0.35, 0.35);
+      transform: scale3d(0.35, 0.35, 0.35);
+    }
+  
+    to {
+      -webkit-transform: scale3d(0.4, 0.4, 0.4);
+      transform: scale3d(0.4, 0.4, 0.4);
+    }
+  }
+
+  h2{
+    font-size: 25px;
+  }
+
+  .cardAndBtn{
+    gap: 20px;
+  }
+  .pokeCard{
+    width: 330px;
+    height: 450px;
+    border-radius: 10px;
+
+  }
+
+  .btn{
+    width: 50px;
+    height: 50px;
+  }
+
+  .pokeBall{
+    top: 220px;
+  }
+
+  .pokeBall > svg {
+    width: 70px;
+  }
+
+  .pokeDesc > div {
+    margin-top: 50px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 490px) {
+
+  .pulse{
+    margin-left: 20px;
+    margin-top: -50px;
+    margin-bottom: -180px;
+  }
+  .cardAndBtn{
+    gap: 10px;
+  }
+  .pokeCard{
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+
+  }
+
+  .btn{
+    width: 40px;
+    height: 40px;
+  }
+
+  .pokeBall{
+    position: absolute;
+    top: 161px;
+  }
+
+  .pokeBall > svg {
+    width: 60px;
+  }
+
+  .pokeDesc > div {
+    margin-top: 35px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
